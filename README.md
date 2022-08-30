@@ -1,8 +1,8 @@
-<h1 align="center">
+<h1>
   quang-tran.netlify.app
 </h1>
-<p align="center">
-  The first version of <a href="https://quang-tran.netlify.app" target="_blank">quang-tran.netlify.app</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify.</a> Full credit goes to Brittany Chiang for the original design and template of the site.
+<p>
+  The first version of <a href="https://quang-tran.netlify.app" target="_blank">quang-tran.netlify.app</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify.</a> Full credit goes to <a href="brittanychiang.com" target="_blank">Brittany Chiang</a> for the original design and template of the site.
 </p>
 <p align="center">Current Status</p>
 <p align="center">
