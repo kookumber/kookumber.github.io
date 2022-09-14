@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
@@ -50,6 +51,26 @@ const StyledHeroSection = styled.section`
     justify-content: space-between;
   }
 
+  .profile-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .profile-pic-container {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-left: 80px;
+  }
+
+  .profile-pic {
+    display: block;
+    z-index: 9999;
+    border-radius: 50%;
+
+  }
 
 `;
 
@@ -67,17 +88,28 @@ const Hero = () => {
   }, []);
 
   const one = <h2 className="big-heading">
+    
     Hello! I'm Quang.
     </h2>;
   const two = <h3 className="big-heading">I enjoy building things with code :)</h3>;
   const three = (
-    <>
+    <div className='profile-details'>
+      <div>
       <p>I'm a software engineer focused on building fullstack projects. I enjoy the different natures and required skillsets of both backend and frontend development.</p>
       <p>Prior to programming, I had roles in Business & Sales Operations, Commercial, and Payment Operations. Through those roles, I realized that I truly enjoyed
         building good products that people want to use. Upon that realization, I decided to transition to a programming career.</p>
       <p>Outside of work, I love spending my time outdoors, specifically at the ocean, surfing, or on the tennis
         courts. I also enjoy learning about Web3, blockchains, and cryptocurrency.</p>
-    </>
+      </div>
+      <div className='profile-pic-container'>
+        <StaticImage 
+            className='profile-pic'
+            src="../../images/profile_v2.jpg"
+            quality={95}
+            objectPosition={'top'}
+            alt="Headshot"/>
+      </div>
+    </div>
   );
   
 
