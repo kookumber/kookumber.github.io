@@ -4,7 +4,7 @@ title: 'Senior Analyst - Payments Strategy'
 company: 'Funding Circle'
 location: 'San Francisco, CA'
 range: 'December 2017 - December 2018'
-url: 'https://web.northeastern.edu/scout/'
+url: 'https://www.fundingcircle.com/us/'
 ---
 
 - Utilized Python (Selenium, Beautiful Soup, & Pandas), SQL, & VBA to write a script that automated over 8 operational workflows and reduced  headcount requirements by 2
