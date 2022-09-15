@@ -96,11 +96,11 @@ const Hero = () => {
   const three = (
     <div className='profile-details'>
       <div>
-      <p>I'm a software engineer focused on building fullstack projects. I enjoy the different natures and required skillsets of both backend and frontend development.</p>
-      <p>Prior to programming, I had roles in Business & Sales Operations, Commercial, and Payment Operations. Through those roles, I realized that I truly enjoyed
-        building good products that people want to use. Upon that realization, I decided to transition to a programming career.</p>
+      <p>I'm a software engineer focused on building fullstack projects. I have primary experiences buildings applications with Javascript, Ruby, Python, and React.</p>
+      <p>Prior to software engineering, I had roles in Business & Sales Operations, Commercial, and Payment Operations. Through those roles, I discovered my passion for
+        building great products that people want to use. I ended up joining App Academy, a full-time, immersive coding bootcamp to transition to software engineering full-time.</p>
       <p>Outside of work, I love spending my time outdoors, specifically at the ocean, surfing, or on the tennis
-        courts. I also enjoy learning about Web3, blockchains, and cryptocurrency.</p>
+        courts. I also enjoy reading biographies and learning about Web3 and blockchains.</p>
       </div>
       <div className='profile-pic-container'>
         <StaticImage 
