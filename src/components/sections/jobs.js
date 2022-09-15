@@ -9,7 +9,7 @@ import { usePrefersReducedMotion } from '@hooks';
 
 const StyledJobsSection = styled.section`
   max-width: 850px;
-  min-height: 100vh;
+  min-height: 90vh;
   .inner {
     display: flex;
     flex-direction: column;

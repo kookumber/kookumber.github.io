@@ -22,13 +22,38 @@ const StyledSocialList = styled.ul`
     background-color: var(--light-slate);
   }
 
+  .link-wrap {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .link-type {
+    display: none;
+    margin-left: 50px;
+    margin-top: 5px;
+    position: absolute;
+    background-color: var(--main-bg-lightest);
+    padding: 10px 15px 5px 15px;
+    border-radius: 12px;
+    min-width: 140px;
+    text-align: center;
+    font-weight: 500;
+  }
+
   li {
+    display: flex;
+    flex-direction: row;
+
     &:last-of-type {
       margin-bottom: 20px;
     }
 
+    &:hover + .link-type {
+      display: block;
+      }
+
     a {
-      padding: 10px;
+      padding: 8px;
 
       &:hover,
       &:focus {
@@ -36,8 +61,8 @@ const StyledSocialList = styled.ul`
       }
 
       svg {
-        width: 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
       }
     }
   }
@@ -48,11 +73,14 @@ const Social = ({ isHome }) => (
     <StyledSocialList>
       {socialMedia &&
         socialMedia.map(({ url, name }, i) => (
-          <li key={i}>
-            <a href={url} aria-label={name} target="_blank" rel="noreferrer">
-              <Icon name={name} />
-            </a>
-          </li>
+          <div className='link-wrap'>
+            <li key={i}>
+              <a href={url} aria-label={name} target="_blank" rel="noreferrer">
+                <Icon name={name} />
+              </a>
+            </li>
+            <div className='link-type'>My {name}</div>
+          </div>
         ))}
     </StyledSocialList>
   </Side>

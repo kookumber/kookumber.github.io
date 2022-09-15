@@ -67,7 +67,7 @@ const StyledHeroSection = styled.section`
 
   .profile-pic {
     display: block;
-    z-index: 9999;
+  
     border-radius: 50%;
 
   }
