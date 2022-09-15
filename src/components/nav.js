@@ -7,6 +7,7 @@ import { navLinks } from '@config';
 import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
+import { StaticImage } from 'gatsby-plugin-image';
 
 
 const StyledHeader = styled.header`
@@ -41,7 +42,62 @@ const StyledNav = styled.nav`
   font-family: var(--font-sans);
   counter-reset: item 0;
   z-index: 12;
-  justify-content: flex-end;
+  justify-content: space-between;
+
+  .logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    min-width: 180px;
+    min-height: 40px;
+
+    
+    & h3 {
+      margin-left: 5px;
+      margin-top: auto;
+      margin-bottom: auto;
+      color: var(--green)
+    }
+    
+    &:hover h3 {
+      color: var(--white)
+    }
+
+    &:hover .pic-overlay {
+      display: none;
+    }
+  }
+
+
+  .pic-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+
+    & .profile-pic {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    & .pic-overlay {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: var(--green-tint);
+      z-index: 100;
+      border-radius: 50%;
+      margin-top: -40px;
+
+    }
+
+  }
+  
+  
 
   .logo {
     ${({ theme }) => theme.mixins.flexCenter};
@@ -149,14 +205,31 @@ const Nav = ({ isHome }) => {
   //   </div>
   // );
 
-  
+  const LogoTitle = (
+
+    <Link to="/#">
+      <div className="logo-container">
+        <div className='pic-container'>
+          <StaticImage
+            className='profile-pic'
+            src="../../images/profile_v2.jpg"
+            quality={95}
+            objectPosition={'top'}
+            alt="Headshot" />
+            <div className="pic-overlay"></div>
+        </div>
+          <h3 className='title'>Quang Tran</h3>
+      </div>
+    </Link>
+    )
+
 
   return (
     <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
       <StyledNav>
         {prefersReducedMotion ? (
           <>
-            {/* {Logo} */}
+            {LogoTitle}
 
             <StyledLinks>
               <ol>
@@ -177,11 +250,11 @@ const Nav = ({ isHome }) => {
             {/* <TransitionGroup component={null}>
               {isMounted && (
                 <CSSTransition classNames={fadeClass} timeout={timeout}>
-                  <>{Logo}</>
+                  <>{LogoTitle}</>
                 </CSSTransition>
               )}
             </TransitionGroup> */}
-
+            {LogoTitle}
             <StyledLinks>
               <ol>
                 <TransitionGroup component={null}>

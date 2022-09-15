@@ -44,7 +44,7 @@ const StyledSkillsSection = styled.section`
 const Skills = () => {
 
     const languages = ['Javascript', 'Ruby', 'Python', 'PostgreSQL']
-    const frameworks = ['React', 'Redux', 'Ruby on Rails', 'MongoDB', 'Express', 'NoSQL', 'Node.js', 'AJAX', 'Mongoose', 'Chart.js', 'jQuery', 'Selenium', 'Beautiful Soup']
+    const frameworks = ['React', 'Redux', 'Ruby on Rails', 'Postgres', 'MongoDB', 'Express', 'NoSQL', 'Node.js', 'AJAX', 'Mongoose', 'Chart.js', 'jQuery', 'Selenium', 'Beautiful Soup']
     const other = ['Git', 'Github', 'AWS S3', 'Tableau', 'Excel', 'Jira']
     const prefersReducedMotion = usePrefersReducedMotion();
     const revealTitle = useRef(null)

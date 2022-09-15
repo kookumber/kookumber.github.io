@@ -4,6 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
+
 // import { email } from '@config';
 
 const StyledHeroSection = styled.section`

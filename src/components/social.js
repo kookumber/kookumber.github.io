@@ -73,7 +73,7 @@ const Social = ({ isHome }) => (
     <StyledSocialList>
       {socialMedia &&
         socialMedia.map(({ url, name }, i) => (
-          <div className='link-wrap'>
+          <div key={i} className='link-wrap'>
             <li key={i}>
               <a href={url} aria-label={name} target="_blank" rel="noreferrer">
                 <Icon name={name} />
