@@ -45,7 +45,7 @@ const Skills = () => {
 
     const languages = ['Javascript', 'Ruby', 'Python', 'PostgreSQL']
     const frameworks = ['React', 'Redux', 'Ruby on Rails', 'Postgres', 'MongoDB', 'Express', 'NoSQL', 'Node.js', 'AJAX', 'Mongoose', 'Chart.js', 'jQuery', 'Selenium', 'Beautiful Soup']
-    const other = ['Git', 'Github', 'AWS S3', 'Tableau', 'Excel', 'Jira']
+    const other = ['Git', 'Github', 'AWS S3', 'Tableau', 'Excel', 'JIRA', 'Confluence']
     const prefersReducedMotion = usePrefersReducedMotion();
     const revealTitle = useRef(null)
     const revealSkills = useRef([])
@@ -69,7 +69,7 @@ const Skills = () => {
 
                 <div className='skills-list'>
                     <div className='skill-type' key={0} ref={el => (revealSkills.current[0] = el)}>
-                        <h3>Programming Languages</h3>
+                        <h3>Languages</h3>
                         <ul className='list-container'>
                             {languages.map((language, idx) => {
                                 return (
